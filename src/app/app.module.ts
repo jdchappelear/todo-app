@@ -10,6 +10,13 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { NewTodoItemComponent } from './new-todo-item/new-todo-item.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+const routes: Routes = [
+  //basic routes
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '**', component: PageNotFoundComponent }
+]
+
 @NgModule({
   declarations: [
     AppComponent,
